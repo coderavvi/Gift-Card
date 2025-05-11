@@ -19,7 +19,7 @@ pub type SpendTokenName =
 
 validator redeem(creator: ByteArray) {
   spend(
-    // Each spend input checks for a token name matching the datum being burned
+    // Each spend input checks for a match in token name and  the datum being burned
     datum: Option<SpendTokenName>,
     _r: Data,
     own_ref: OutputReference,
